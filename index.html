@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<?php
-
-    $conexion=mysqli_connect('localhost','root','2020','CSV_DB');
- ?>
 <html>
 <head>
   <title> Estancia II UPB </title>
@@ -16,13 +12,6 @@
           <td>Dato </td>
           <td>Numero </td>
        </tr>
-       <?php
-       $sql="SELECT * from t_ahora";
-       $result=mysqli_query($conexion,$sql);
-       
-       while($temperstura=mysqli_fetch_array($result)){
-       
-       ?>
        
        
        
@@ -33,9 +22,7 @@
          
         
        </tr>
-     <?php
-     }
-     ?>
+   
     </table>
     
 </body>
