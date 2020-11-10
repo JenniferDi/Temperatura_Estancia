@@ -1,0 +1,43 @@
+# Temperatura_Estancia
+EstanciaII con HTML
+<?php
+
+    $conexion=mysqli_connect('localhost','root','2020','CSV_DB');
+ ?>
+<html>
+<head>
+  <title> Estancia II UPB </title>
+</head>
+
+<body background="brack.jpg>
+    <h1> Temperatura </h1>
+    <table border=1>
+       <tr>
+          <td>ahora </td>
+          <td>Dato </td>
+          <td>Numero </td>
+       </tr>
+       <?php
+       $sql="SELECT * from t_ahora";
+       $result=mysqli_query($conexion,$sql);
+       
+       while($temperstura=mysqli_fetch_array($result)){
+       
+       ?>
+       
+       
+       
+       <tr>
+          <td><?php echo $temperatura['ahora'] ?></td>
+          <td><?php echo $temperatura['Dato'] ?></td>
+          <td><?php echo $temperatura['Numero'] ?></td>
+         
+        
+       </tr>
+     <?php
+     }
+     ?>
+    </table>
+    
+</body>
+</html>
